@@ -1,36 +1,299 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>あなたのＨＰタイトル</title>
-<meta name="keywords" content="ページのキーワードA,B,C">
-<meta name="description" content="ページの説明">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>MUS3E: 高齢者のためのモビリティ・ユビキタスセンサエッジ環境</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MUS3E: 高齢者の在宅生活を非接触センサとエッジコンピューティングで見守る研究プロジェクトの紹介ページです。">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background: #f5f5f7;
+    }
+    header {
+      background: #143f6b;
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.9rem;
+    }
+    header p {
+      margin: 0.2rem 0;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      background: #fff;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      border-left: 4px solid #143f6b;
+      padding-left: 0.6rem;
+      margin-bottom: 0.8rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      margin: 0.3rem 0 0.6rem;
+    }
+    ul {
+      margin: 0.4rem 0 0.8rem 1.2rem;
+      padding: 0;
+    }
+    li {
+      margin: 0.2rem 0;
+    }
+    .tagline {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.1rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255,255,255,0.75);
+      margin-right: 0.4rem;
+    }
+    .keywords span {
+      display: inline-block;
+      background: #eef3fb;
+      color: #143f6b;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin: 0.1rem 0.3rem 0.1rem 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+    .card {
+      border-radius: 0.8rem;
+      border: 1px solid #e0e0e5;
+      padding: 0.9rem 1rem;
+      background: #fafafa;
+      font-size: 0.9rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+    .small {
+      font-size: 0.85rem;
+    }
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    a {
+      color: #143f6b;
+    }
+  </style>
 </head>
 <body>
-<div id="outer">
-<header><h1>あなたのＨＰタイトル</h1>
-<p>あなたのＨＰの説明文</p>
+
+<header>
+  <div class="badge">Research Project</div>
+  <div class="badge">Ambient Sensing × Elderly Care</div>
+  <h1>MUS3E: 高齢者のためのモビリティ・ユビキタスセンサエッジ環境</h1>
+  <p class="tagline">
+    Mobility Ubiquitous Sensor Edge Environment for the Elderly
+  </p>
+  <p class="tagline">
+    Tomihiro Utsumi, Masatoshi Arikawa, Masashi Hashimoto（Akita University）
+  </p>
 </header>
-<div id="content">
-<div class="inner"><h2>記事ページ見出し・大</h2>
-<p>文章あれこれ</p>
-<h3>記事ページ見出し・中</h3>
-<p>文章あれこれ</p>
-<h4>記事ページ見出し・小</h4>
-<p>文章あれこれ</p>
-</div>
-</div>
-<aside>
-<div class="right-title">サイドバータイトル</div>
-<div class="link">
-<ul>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-</ul>
-</div>
-</aside>
-<footer>© 2010 あなたのホームページ</footer>
-</div></body>
+
+<main>
+
+  <section id="overview">
+    <h2>研究概要</h2>
+    <p>
+      超高齢社会では、一人暮らしや高齢夫婦のみの世帯が増えています。転倒や熱中症などの
+      急性イベントだけでなく、フレイルのように徐々に進行する健康状態の悪化を、日常生活の中で
+      早期に察知する仕組みが求められています。
+    </p>
+    <p>
+      <strong>MUS3E（Mobility Ubiquitous Sensor Edge Environment）</strong> は、
+      一般家庭に安価な環境センサとエッジコンピューティングを導入し、
+      高齢者の屋内移動や歩行速度を非接触・非装着で計測して見守るためのフレームワークです。
+      住環境を大規模に改修することなく、既存住宅をスマートホームに“後付けで DX 化”できることを目指しています。
+    </p>
+    <div class="keywords">
+      <span>PIR 人感センサ</span>
+      <span>超音波距離センサ</span>
+      <span>LiDAR</span>
+      <span>歩行速度計測</span>
+      <span>フレイル検知</span>
+      <span>エッジコンピューティング</span>
+      <span>MQTT / NTP</span>
+      <span>高齢者見守り</span>
+    </div>
+  </section>
+
+  <section id="background">
+    <h2>背景と課題</h2>
+    <h3>高齢者の「Ageing in Place（自宅での暮らし）」をどう支えるか</h3>
+    <p>
+      高齢者ができるだけ長く自宅で自立して暮らす「ageing in place」は QOL 向上の観点からも重要です。
+      しかし、以下のような課題が存在します。
+    </p>
+    <ul>
+      <li>転倒・熱中症などの緊急事態がすぐに発見されないリスク</li>
+      <li>フレイルのような緩徐な機能低下の“兆し”が気づかれにくい</li>
+      <li>自動車免許返納や公共交通の不足による受診・介護サービス利用の困難さ</li>
+    </ul>
+
+    <h3>従来技術の限界</h3>
+    <p>
+      ウェアラブルデバイスやカメラを用いた見守りも提案されていますが、
+      高齢者にとっては「装着の負担」や「プライバシーの懸念」が大きく、
+      長期・連続的な運用には必ずしも適していません。
+    </p>
+    <p>
+      MUS3E は、<strong>「装着不要」かつ「カメラ非使用」</strong> の環境センサネットワークを用いて、
+      日常生活のまま活動量や歩行速度を自動計測する点に特徴があります。
+    </p>
+  </section>
+
+  <section id="concept">
+    <h2>MUS3E フレームワークのコンセプト</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>1. 非接触・非装着</h3>
+        <p>
+          天井や壁に設置した <strong>PIR センサや超音波センサ</strong> により、
+          高齢者がセンサを意識することなく、日常動作の中で歩行速度や移動パターンを計測します。
+        </p>
+      </div>
+      <div class="card">
+        <h3>2. 低コスト・持続可能</h3>
+        <p>
+          すべて量産されている市販センサ（PIR、超音波、LiDAR、ESP8266/ESP32 など）を利用。
+          代替品も多く、故障時にも交換しやすい構成です。
+        </p>
+      </div>
+      <div class="card">
+        <h3>3. エッジコンピューティング</h3>
+        <p>
+          家庭内の <strong>Raspberry Pi</strong> をエッジコンピュータとし、
+          MQTT により各センサからのデータを収集・解析。インターネットがなくても
+          ローカルで歩行速度の計測が可能です。
+        </p>
+      </div>
+      <div class="card">
+        <h3>4. 多様なステークホルダーへの還元</h3>
+        <p>
+          高齢者本人だけでなく、家族・ケアマネジャー・介護職・医療者・自治体が
+          必要な情報（活動量の低下、異常検知など）を共有することを想定しています。
+        </p>
+      </div>
+    </div>
+
+    <h3>システム構成（論理アーキテクチャ）</h3>
+    <p class="small">
+      論文中の図（Figure 2）では、MUS3E を以下の 3 層で構成しています：
+    </p>
+    <ul class="small">
+      <li><strong>センサネットワーク層：</strong> PIR、LiDAR、超音波センサ＋ ESP8266/ESP32、MQTT 通信、NTP 同期</li>
+      <li><strong>エッジコンピュータ層：</strong> Raspberry Pi による歩行速度算出、ログ保存、LINE 通知など</li>
+      <li><strong>インターネット／クラウド層：</strong> データベース蓄積、ビッグデータ分析、遠隔見守りサービスとの連携</li>
+    </ul>
+  </section>
+
+  <section id="technology">
+    <h2>技術的なポイント</h2>
+
+    <h3>歩行速度の自動計測</h3>
+    <p>
+      廊下などの天井に 2 台の PIR センサを一定距離で配置し、
+      <strong>検知タイミングの差分</strong> から歩行速度を算出します。
+      LiDAR を用いたタイミングゲート方式との比較実験により、
+      1 m および 5 m の距離で高い精度が得られることを確認しています。
+    </p>
+
+    <h3>個人識別のための身長推定</h3>
+    <p>
+      複数人世帯（高齢夫婦など）に対応するため、
+      計測区間の中央天井に配置した <strong>超音波距離センサ</strong> により
+      歩行中の身長を推定し、身長・歩行速度の組み合わせから個人識別の可能性を検証しています。
+    </p>
+
+    <h3>時間同期とデータ通信</h3>
+    <p>
+      各センサモジュールは NTP サーバと同期し、
+      JSON 形式で検知時刻を MQTT ブローカへ送信します。
+      エッジコンピュータでは Linux（Debian）、Arduino 環境、Mosquitto など
+      オープンソースソフトウェアを組み合わせて実装しています。
+    </p>
+
+    <h3>SNS による通知（LINE 連携）</h3>
+    <p>
+      歩行速度の変化や環境情報（室温・湿度など）を、
+      LINE Notify API を利用して家族や介護者に送信する仕組みを試作しています。
+      グラフ画像を送ることで、活動量の推移を直感的に把握できるようにしています。
+    </p>
+  </section>
+
+  <section id="impact">
+    <h2>期待される効果と今後の展開</h2>
+    <ul>
+      <li>日常生活の中での歩行速度の低下を早期に検知し、フレイル評価や受診・介入のきっかけにできる。</li>
+      <li>高齢者本人の負担を最小限に抑えつつ、長期・連続モニタリングが可能。</li>
+      <li>家族・介護・医療・自治体への情報提供を通じて、高齢者の孤立防止や支援の最適化に貢献。</li>
+      <li>量産センサとオープンソースソフトウェアを用いているため、他地域・他住宅への展開が容易。</li>
+    </ul>
+    <p>
+      今後は、高齢者施設など大規模環境への展開や、
+      商業施設・大学キャンパスといった公共空間での人流解析への応用も検討しています。
+      また、ネットワークセキュリティやプライバシ保護の強化も重要な課題です。
+    </p>
+  </section>
+
+  <section id="publication">
+    <h2>関連論文・発表</h2>
+    <p>
+      本研究の詳細は、以下の論文で報告されています。
+    </p>
+    <p class="small">
+      Tomihiro Utsumi, Masatoshi Arikawa, and Masashi Hashimoto,  
+      <strong>“MUS3E: A Mobility Ubiquitous Sensor Edge Environment for the Elderly,”</strong>  
+      <em>Electronics</em>, 12(14), 3003, 2023.  
+      DOI: <a href="https://doi.org/10.3390/electronics12143003" target="_blank" rel="noopener">10.3390/electronics12143003</a>
+    </p>
+    <p class="small">
+      ※ 論文はオープンアクセス（CC BY 4.0）で公開されています。
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    本ページの内容は、秋田大学における高齢者見守り・アンビエントセンシング研究プロジェクト
+    MUS3E の成果をもとに作成されています。
+  </p>
+</footer>
+
+</body>
 </html>
